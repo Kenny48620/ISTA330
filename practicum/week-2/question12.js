@@ -44,3 +44,12 @@ for (let partition of allPartitions("aba")) {
 var maxBalanceNumber = function(input) {
 
 };
+
+console.log(allPartitions("abaabbabab"));
+
+
+
+// "abaabbabab" => 4
+// 'aaababbb'   => 2 
+// "aaababbba"  => 3
+
