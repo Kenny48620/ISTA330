@@ -36,6 +36,7 @@ function allPartitions(input){
   }
   return result.concat(newPartitions);  
 }
+
 // Here is how you can use the utility function allPartitions:
 for (let partition of allPartitions("aba")) {
   console.log(partition);
@@ -43,9 +44,30 @@ for (let partition of allPartitions("aba")) {
 
 var maxBalanceNumber = function(input) {
 
+  let max = 0;
+  for (let partition of allPartitions(input)){
+    let count = 0;
+    for (let i=0; i<partition.length; i++){
+      let aCount = 0;
+      let bCount = 0;
+      for (let j=0; j<partition[i].length; j++){
+        if (partition[i][j] == "a") {aCount++;}
+        else if (partition[i][j] == "b"){bCount++;}
+      }
+      if (aCount!=0 && aCount == bCount){count++;}
+    } // close inner for
+    if (count > max) {max = count;}
+  }// close outer for
+
+  return max;
 };
 
-console.log(allPartitions("abaabbabab"));
+
+//console.log(maxBalanceNumber("abaabbabab"));
+//console.log(maxBalanceNumber("aaababbb"));
+//console.log(maxBalanceNumber("aaababbba"));
+
+//console.log(allPartitions("abaabbabab"));
 
 
 
