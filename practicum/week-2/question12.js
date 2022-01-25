@@ -43,7 +43,6 @@ for (let partition of allPartitions("aba")) {
 }
 
 var maxBalanceNumber = function(input) {
-
   let max = 0;
   for (let partition of allPartitions(input)){
     let count = 0;
@@ -55,10 +54,9 @@ var maxBalanceNumber = function(input) {
         else if (partition[i][j] == "b"){bCount++;}
       }
       if (aCount!=0 && aCount == bCount){count++;}
-    } // close inner for
+    } // close inner loop
     if (count > max) {max = count;}
-  }// close outer for
-
+  }// close outer loop
   return max;
 };
 
@@ -68,8 +66,6 @@ var maxBalanceNumber = function(input) {
 //console.log(maxBalanceNumber("aaababbba"));
 
 //console.log(allPartitions("abaabbabab"));
-
-
 
 // "abaabbabab" => 4
 // 'aaababbb'   => 2 

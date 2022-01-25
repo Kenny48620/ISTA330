@@ -11,13 +11,10 @@ Example: input: cookies = [3, 5, 8] , extraCookies = 8
 
 var canGetEqualCookies = function(cookies, extraCookies) {
 	let max = Math.max(...cookies);
-
 	for (let i=0; i<cookies.length; i++){	
 		if (cookies[i] == max){continue;}
 		if (cookies[i] < max){extraCookies-=cookies[i];}
-
 	}
-
 	if (extraCookies < 0 ) return false;
 	if (extraCookies%cookies.length == 0) return true;
 	else return false; 
@@ -27,10 +24,8 @@ var canGetEqualCookies = function(cookies, extraCookies) {
 // let cookies=[3,5,8];
 // //[3,5,2] 8
 // //[5,5,5] 3
-
 // console.log(canGetEqualCookies([3,5,8], 8));
 // console.log(canGetEqualCookies([5,6,1], 6));
 // console.log(canGetEqualCookies([3,5,2], 6));
-
 // console.log(canGetEqualCookies([5,6,1], 5));
 // console.log(canGetEqualCookies([3,5,2], 8));

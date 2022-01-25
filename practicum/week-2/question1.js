@@ -19,7 +19,7 @@ var runningSum = function(input) {
 // let array1 = [43, -3, -39];
 // let array2 = [0,2,4,6,8,12];
 
-// console.log("Orginal:"+array);
+// console.log(array);
 // console.log(runningSum(array));
 
 // console.log();

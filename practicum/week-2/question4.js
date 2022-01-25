@@ -16,7 +16,6 @@ var howManyCommon = function(A, B) {
 	for (let i=0; i<B.length; i++){
 		if (mySet.has(B[i])){ count++;}
 	}
-
 	return count;
 };
 
@@ -24,7 +23,6 @@ var howManyCommon = function(A, B) {
 
 // let a="gty";
 // let b="iTygrtg"
-
 
 // console.log(howManyCommon('gtY', 'iTygrtg'));
 // console.log(howManyCommon('asDf', 'dsssaaFa') == 6);

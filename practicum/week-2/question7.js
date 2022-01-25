@@ -13,14 +13,11 @@ output: 4
 var maxSumOfMins = function(input) {
 	input.sort();
 	let result  = 0;
-	
 	for (let i=0; i<input.length; i+=2){
 		result += input[i];
 	}
 	return result;
 };
-
-
 
 // console.log(maxSumOfMins([4, 3, 8, 0]) ==4);
 // console.log(maxSumOfMins([1, 3, 4, 2, 6, 8, 5, 7])==16);

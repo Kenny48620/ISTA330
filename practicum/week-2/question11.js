@@ -16,11 +16,10 @@ var decode = function(input) {
 		let val   = input[i+1];
 		for (let j=0; j<times; j++){
 			result.push(val);
-		}
-	}
+		} // close inner loop
+	} // close outer loop
 	return result;
 };
-
 
 // console.log(decode([2, 5, 4, 2]));
 

@@ -6,7 +6,6 @@ output: 3
 */
 
 var median = function(input) {
-
 	let index;
 	// odd
 	if (input.length%2 != 0){
@@ -24,7 +23,6 @@ var median = function(input) {
 // console.log(median([1, 2, 3, 4, 5, 6, 7, 8]) == 4.5); // 4.5
 // console.log(median([1, 2, 2, 8, 5, 7, 9 ]) == 5); //5 I guess is suppose to be 8 
 // console.log(median([1, 2, 3, 4, 6, 6, 7, 8]) == 5);//5
-
 
 // console.log(median([1,2,2,3,4,7,9]) == 3);
 // console.log(median([1,2,3,4,5,6,7,8]) == 4.5);

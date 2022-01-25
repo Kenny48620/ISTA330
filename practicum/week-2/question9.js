@@ -9,18 +9,14 @@ output: 'hello'
 */
 
 var suffleString = function(input, shuffleIndices) {
-
 	let map = new Map();
 	for (let i=0; i<input.length; i++){
 		map.set(shuffleIndices[i], input[i]);
 	}
-
 	let result = "";
-
 	for (let i=0; i<input.length; i++){
 		result += map.get(i);
 	}
-
 	return result;
 };
 

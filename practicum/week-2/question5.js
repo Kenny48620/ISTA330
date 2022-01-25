@@ -18,16 +18,12 @@ var minimalReduction = function(n) {
 		if (n%4 == 0){return find(n/4, operations+1);}
 		if (n%3 == 0){return find(n/3, operations+1);}
 		else return find(n-1, operations+1);
-	}
-	
-
+	} // close find(n, operations)
 	return find(n, 0);
 };
 
 
-
 // console.log(minimalReduction(12));
-
 // console.log(minimalReduction(13) == 4);
 // console.log(minimalReduction(19) == 5);
 
