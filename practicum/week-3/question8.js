@@ -13,5 +13,20 @@ output: 3
 */
 
 var d_integer = function(input) {
-
+	let map = new Map();
+	for (let e of input){
+		if (!map.has(e)) {map.set(e, 1);}
+		else {map.set(e, map.get(e)+1);}
+	}
+	let dInteger = -1;
+	for (let [key, val] of map){
+		if (key == val){
+			if (key > dInteger) {dInteger = key;}
+		}
+	}
+	return dInteger;
 };
+
+console.log(d_integer([3,5,3,3,5,1]));
+console.log(d_integer([3, 5, 3, 4, 4, 3, 5, 1, 4, 4])); // 4
+console.log(d_integer([3, 6, 3, 9, 6, 45, 86, 9] ));// -1

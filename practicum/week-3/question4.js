@@ -13,5 +13,18 @@ Example:
 */
 
 var hasDuplicates = function(input) {
+	let set = new Set();
+	for (let val of input){
+		if (!set.has(val)){set.add(val);}
+		else return true;
+	}
 
+	return false;
 };
+
+
+console.log(hasDuplicates([19,1,1,23,23,4,3,23,1,2]));
+console.log(hasDuplicates([19, 18, 17, 23, 24, 4, 3, 26, 1, 2])); // false
+console.log(hasDuplicates([3, 5, 90, 21, 3])); // true
+
+console.log(hasDuplicates([3, 5, 90, 21])); // false

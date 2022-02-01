@@ -13,5 +13,23 @@ so there are two groups with the largest size.
 */
 
 var largestGroupsCount = function(n) {
+	if (n < 9) return n;
 
+	let groupsCount = [1,1,1,1,1,1,1,1,1];
+	for (let i=10; i<=n; i++){
+		groupsCount[i%10] ++;
+	}
+
+	let count = 0;
+	let val   = groupsCount[0];
+
+	for (let i=0; i<groupsCount.length; i++){
+		if (groupsCount[i] == val) {count++;}
+		else return count;
+	}
+	return count;
 };
+
+console.log(largestGroupsCount(11));//2
+console.log(largestGroupsCount(12));//3
+console.log(largestGroupsCount(24));//5
